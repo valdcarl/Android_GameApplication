@@ -1,5 +1,5 @@
 # SudokuApplication
-##CSCI 4211 : Mobile Computing and Programming Project
+## CSCI 4211 : Mobile Computing and Programming Project
 ### Team: Debussy Devs
 ### Members:
 * Justing Luong

@@ -8,6 +8,7 @@
 
 
 4/15/2022 --- Sudoku Updates --- Carlos Valdez:<br>
+<ul>
 <li>activity_main.xml & MainActivity.java:</li>
     <ul>
         <li>Changed to ConstraintLayout</li>
@@ -27,4 +28,5 @@ activity_select_difficulty.xml & SelectDifficultyActivity.java:
     Added Button "Easy"   (IN-PROGRESS)
     Added Button "Medium" (IN-PROGRESS)
     Added Button "Hard"   (IN-PROGRESS)
+</ul>
   

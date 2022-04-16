@@ -14,12 +14,16 @@
         <li>Changed to ConstraintLayout</li>
         <li>Added ImageView</li>
         <li>The ImageView will contain the @drawable src as a logo for our application (sample image in-place)</li>
+        <li>Added Button "Play" (functional)</li>
+        <li>Should take to a new activity to select the difficulty</li>
+        <ul>
+            <li>Easy, Medium, Hard</li>
+        </ul>
+        <li>Added Button "Exit" (functional)</li>
+        <ul>
+            <li>Exits the application entirely</li>
+        </ul>
     </ul>
-    Added Button "Play" (functional)
-        Should take to a new activity to select the difficulty
-              Easy, Medium, Hard
-    Added Button "Exit" (functional)
-        Should exit the application entirely
 
 activity_select_difficulty.xml & SelectDifficultyActivity.java:
     Changed to ConstrantLayout

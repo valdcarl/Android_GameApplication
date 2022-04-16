@@ -24,13 +24,16 @@
             <li>Exits the application entirely</li>
         </ul>
     </ul>
-
-activity_select_difficulty.xml & SelectDifficultyActivity.java:
-    Changed to ConstrantLayout
-    Added ImageView
-        The ImageView will contain the @drawable src as a logo for our application (sample image in-place)
-    Added Button "Easy"   (IN-PROGRESS)
-    Added Button "Medium" (IN-PROGRESS)
-    Added Button "Hard"   (IN-PROGRESS)
+</ul>
+<ul>
+<li>activity_select_difficulty.xml & SelectDifficultyActivity.java:</li>
+    <ul>
+        <li>Changed to ConstrantLayout</li>
+        <li>Added ImageView</li>
+            <li>The ImageView will contain the @drawable src as a logo for our application (sample image in-place)</li>
+        <li>Added Button "Easy"   (IN-PROGRESS)</li>
+        <li>Added Button "Medium" (IN-PROGRESS)</li>
+        <li>Added Button "Hard"   (IN-PROGRESS)</li>
+    </ul>
 </ul>
   

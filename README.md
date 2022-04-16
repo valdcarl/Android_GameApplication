@@ -7,7 +7,7 @@
 * Carlos Valdez
 
 
-4/15/2022 --- Sudoku Updates --- Carlos Valdez:
+4/15/2022 --- Sudoku Updates --- Carlos Valdez:<br>
 -activity_main.xml & MainActivity.java:
     - Changed to ConstraintLayout
     - Added ImageView

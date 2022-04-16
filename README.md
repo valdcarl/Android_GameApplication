@@ -7,9 +7,8 @@
 * Carlos Valdez
 
 
-4/15/2022 --- Sudoku Updates:
-
-activity_main.xml & MainActivity.java:
+4/15/2022 --- Sudoku Updates --- Carlos Valdez:
+-activity_main.xml & MainActivity.java:
     - Changed to ConstraintLayout
     - Added ImageView
         - The ImageView will contain the @drawable src as a logo for our application (sample image in-place)
@@ -19,7 +18,7 @@ activity_main.xml & MainActivity.java:
     - Added Button "Exit" (functional)
         - Should exit the application entirely
 
-activity_select_difficulty.xml & SelectDifficultyActivity.java:
+-activity_select_difficulty.xml & SelectDifficultyActivity.java:
     - Changed to ConstrantLayout
     - Added ImageView
         - The ImageView will contain the @drawable src as a logo for our application (sample image in-place)

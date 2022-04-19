@@ -1,11 +1,9 @@
-package edu.cudenver.sudokuapplication;
+package edu.cudenver.android_gameapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.widget.Chronometer;
-
-import java.util.Collections;
 
 public class PlayGameActivity extends AppCompatActivity {
     private Chronometer timer;

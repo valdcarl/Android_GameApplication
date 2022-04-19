@@ -1,4 +1,4 @@
-package edu.cudenver.sudokuapplication;
+package edu.cudenver.android_gameapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 

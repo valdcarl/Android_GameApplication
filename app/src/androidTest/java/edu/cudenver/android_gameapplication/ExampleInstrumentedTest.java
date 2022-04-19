@@ -1,4 +1,4 @@
-package edu.cudenver.sudokuapplication;
+package edu.cudenver.android_gameapplication;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("edu.cudenver.sudokuapplication", appContext.getPackageName());
+        assertEquals("edu.cudenver.android_gameapplication", appContext.getPackageName());
     }
 }

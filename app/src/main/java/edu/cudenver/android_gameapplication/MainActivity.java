@@ -1,13 +1,5 @@
-/*
-    Thinking of making the MainActivity, the start-up screen
-        * This will fulfill an activity requirement
-        * It will help direct things in the application
-            - Start the Game
-            - Exit the Game
-            - Setting button (optional)
- */
 
-package edu.cudenver.sudokuapplication;
+package edu.cudenver.android_gameapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 

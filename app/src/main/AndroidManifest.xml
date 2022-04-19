@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.cudenver.sudokuapplication">
+    package="edu.cudenver.android_gameapplication">
 
     <application
         android:allowBackup="true"
@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SudokuApplication">
         <activity
-            android:name=".PlayGameActivity"
+            android:name="edu.cudenver.android_gameapplication.PlayGameActivity"
             android:exported="false" />
         <activity
-            android:name=".SelectDifficultyActivity"
+            android:name="edu.cudenver.android_gameapplication.SelectDifficultyActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="edu.cudenver.android_gameapplication.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

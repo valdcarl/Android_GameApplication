@@ -19,9 +19,9 @@ public class SelectDifficultyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_difficulty);
 
         // must initialize the easy/medium/hard buttons to select difficulty level
-        Button easyBtn = findViewById(R.id.easyBtn);
-        Button medBtn = findViewById(R.id.medBtn);
-        Button hardBtn = findViewById(R.id.hardBtn);
+        Button easyBtn = findViewById(R.id.easyBtn);    // A game given 50/81 squares
+        Button medBtn = findViewById(R.id.medBtn);      // A game given 40/81 squares
+        Button hardBtn = findViewById(R.id.hardBtn);    // A game given 30/81 squares
 
         // Tried using a switch-case, but Dr.L warned about warnings, so just went with this way
         easyBtn.setOnClickListener(new View.OnClickListener() {

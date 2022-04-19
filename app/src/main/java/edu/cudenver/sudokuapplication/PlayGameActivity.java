@@ -1,26 +1,13 @@
 package edu.cudenver.sudokuapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.widget.Button;
 import android.widget.Chronometer;
 
-public class PlayGameActivity extends AppCompatActivity {
+import java.util.Collections;
 
-//    private class Cell {
-//        int value;              // each cell has a value
-//        boolean fixed;          // some cells cannot be changed by the user
-//        Button bt;
-//
-//        public Cell(int initialValue, Context THIS) {
-//            if(initialValue == 0) {
-//                boolean
-//            }
-//        }
-//    }
+public class PlayGameActivity extends AppCompatActivity {
     private Chronometer timer;
 
     @Override

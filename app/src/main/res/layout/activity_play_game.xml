@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,7 +8,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintHorizontal_bias="1.0"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent"
+        custom:layout_constraintVertical_bias="0.0">
 
         <RelativeLayout
             android:id="@+id/sudokuTopPanel"
@@ -33,39 +39,34 @@
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/alarmClockForTimeElapsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="26dp"
+                android:layout_toLeftOf="@+id/timeElapsed"
+                custom:srcCompat="@android:drawable/ic_lock_idle_alarm" />
         </RelativeLayout>
 
-        <GridView
-            android:id="@+id/sudokuGrid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <edu.cudenver.sudokuapplication.SudokuBoard
+            android:id="@+id/sudokuBoard"
+            android:layout_width="345dp"
+            android:layout_height="357dp"
             android:layout_below="@+id/sudokuTopPanel"
-            android:layout_marginStart="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:horizontalSpacing="2dp"
-            android:minHeight="48dp"
-            android:numColumns="3"
-            android:padding="3dp"
-            android:paddingLeft="3dp"
-            android:paddingTop="3dp"
-            android:paddingRight="3dp"
-            android:paddingBottom="3dp"
-            android:verticalSpacing="2dp" />
+            android:layout_marginEnd="32dp"
+            custom:boardColor="@color/black"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent">
 
-        <GridView
-            android:id="@+id/userSelection"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/sudokuGrid"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="50dp"
-            android:gravity="center"
-            android:horizontalSpacing="2dp"
-            android:numColumns="11"
-            android:verticalSpacing="2dp" />
+        </edu.cudenver.sudokuapplication.SudokuBoard>
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

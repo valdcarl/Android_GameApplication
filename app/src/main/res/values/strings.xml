@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">SudokuApplication</string>
+    <string name="app_name">Sudoku</string>
     <string name="play">PLAY</string>
     <string name="exit">EXIT</string>
     <string name="easy">EASY</string>
     <string name="medium">MEDIUM</string>
     <string name="hard">HARD</string>
+    <string name="_00_00">00:00</string>
 </resources>

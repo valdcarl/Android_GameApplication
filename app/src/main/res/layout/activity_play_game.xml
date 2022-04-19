@@ -17,7 +17,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <RelativeLayout
-            android:id="@+id/sudokuTopPanel"
+            android:id="@+id/topPanel"
             android:layout_width="391dp"
             android:layout_height="67dp"
             android:layout_marginStart="20dp"

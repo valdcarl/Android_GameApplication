@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SudokuApplication">
         <activity
+            android:name=".PlayGameActivity"
+            android:exported="false" />
+        <activity
             android:name=".SelectDifficultyActivity"
             android:exported="false" />
         <activity

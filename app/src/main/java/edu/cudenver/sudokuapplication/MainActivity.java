@@ -19,9 +19,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button playBtn; // var to prepare playBtn
-    private Button exitBtn; // var to prepare exitBtn
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +26,11 @@ public class MainActivity extends AppCompatActivity {
 
         // must initialize the buttons play and exit
         // each needs a setOnClickListener
-        playBtn = findViewById(R.id.playBtn);
-        exitBtn = findViewById(R.id.exitBtn);
+        // var to prepare playBtn
+        Button playBtn = findViewById(R.id.playBtn);
+        // var to prepare exitBtn
+        Button exitBtn = findViewById(R.id.exitBtn);
+
         playBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,9 +45,10 @@ public class MainActivity extends AppCompatActivity {
                 onClickExitBtn();
             }
         });
-    }
+    } //end of onCreate MainActivity
 
 
+    // onClick functions, with appropriate intents
     public void onClickPlayBtn() {
         // When the user clicks on the play button
         // We should go to the next activity that will display the difficulty levels

@@ -31,9 +31,9 @@
         <li>Changed to ConstrantLayout</li>
         <li>Added ImageView</li>
             <li>The ImageView will contain the @drawable src as a logo for our application (sample image in-place)</li>
-        <li>Added Button "Easy"   (IN-PROGRESS)</li>
-        <li>Added Button "Medium" (IN-PROGRESS)</li>
-        <li>Added Button "Hard"   (IN-PROGRESS)</li>
+        <li>Added Button "Easy"</li>
+        <li>Added Button "Medium"</li>
+        <li>Added Button "Hard"</li>
     </ul>
 </ul>
 

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class SelectDifficultyActivity extends AppCompatActivity {
 
@@ -28,6 +29,7 @@ public class SelectDifficultyActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // makes a call to the game, but loads in an easy difficulty activity
                 difficultySelectedByUser = 1;
+                //testClickWorks();
                 onClickDifficultySelected();
             }
         });
@@ -45,6 +47,7 @@ public class SelectDifficultyActivity extends AppCompatActivity {
                 onClickDifficultySelected();
             }
         });
+
     } // end of onCreate SelectedDifficultyActivity
 
     // onClick function with appropriate intent and designated difficulty selected
@@ -52,5 +55,13 @@ public class SelectDifficultyActivity extends AppCompatActivity {
         Intent intent = new Intent(SelectDifficultyActivity.this, PlayGameActivity.class);
         intent.putExtra("DIFFICULTY", difficultySelectedByUser);
         SelectDifficultyActivity.this.startActivity(intent);
+        //startActivity(intent);
+    }
+    public void testClickWorks() {
+        // unit testing on if button is clicked (WORKS)
+        Toast.makeText(
+                SelectDifficultyActivity.this,
+                "Button clicked",
+                Toast.LENGTH_SHORT).show();
     }
 }

@@ -6,17 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".PlayGameActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="145dp"
+        android:layout_height="155dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="262dp"
+        android:layout_marginTop="149dp"
         android:layout_marginEnd="120dp"
-        android:layout_marginBottom="421dp"
-        android:text="@string/playgame"
+        android:layout_marginBottom="427dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_android_black_24dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

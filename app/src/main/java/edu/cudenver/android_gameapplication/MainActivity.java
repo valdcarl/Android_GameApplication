@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickPlayBtn() {
         // When the user clicks on the play button
         // We should go to the next activity that will display the difficulty levels
-        Intent intent = new Intent(this, PlayGameActivity.class);
+        Intent intent = new Intent(this, PlayerSelectActivity.class);
         startActivity(intent);
     }
 

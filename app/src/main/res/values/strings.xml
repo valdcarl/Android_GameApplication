@@ -19,8 +19,8 @@
     <string name="count_up_timer_clock">count up timer clock</string>
     <string name="rules">RULES</string>
     <string name="tic_tac_toe">Tic-Tac-Toe</string>
-    <string name="rulesexplained">
-        TIC-TAC-TOE IS A TWO PLAYER GAME.\n
+    <string name="rulesexplained">\n
+        TIC-TAC-TOE IS A TWO PLAYER GAME\n
         PLAYER 1 IS REPRESENTED WITH AN \'X\'\n
         PLAYER 2 IS REPRESENTED WITH AN \'O\'\n
         FIRST PLAYER TO GET 3-IN-A-ROW WINS \n\n

@@ -72,3 +72,8 @@ public class MainActivity extends AppCompatActivity {
         System.exit(0);
     }
 }
+
+/*
+    Notes:
+        do not need onClickListeners if desired, but good practice to know how to do
+ */

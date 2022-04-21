@@ -20,9 +20,9 @@
     <string name="rules">RULES</string>
     <string name="tic_tac_toe">Tic-Tac-Toe</string>
     <string name="rulesexplained">
-        TWO PLAYER GAME.\n
-        PLAYER1 IS REPRESENTED WITH AN \'X\'\n
-        PLAYER2 IS REPRESENTED WITH AN \'Y\'\n
+        TIC-TAC-TOE IS A TWO PLAYER GAME.\n
+        PLAYER 1 IS REPRESENTED WITH AN \'X\'\n
+        PLAYER 2 IS REPRESENTED WITH AN \'O\'\n
         FIRST PLAYER TO GET 3-IN-A-ROW WINS \n\n
 
         3-IN-A-ROW CAN BE A:\n
@@ -34,4 +34,11 @@
         THE GAME IS CONSIDERED A TIE!\n
         MAY THE BEST PLAYER WIN! \n
     </string>
+    <string name="player_1_txt">PLAYER 1</string>
+    <string name="name_player1_hint">ENTER NAME</string>
+    <string name="player_2_txt">PLAYER 2</string>
+    <string name="name_player2_hint">ENTER NAME</string>
+    <string name="x_image_str_resource">X image</string>
+    <string name="y_image_str_resource">Y image</string>
+    <string name="versusimage">versusImage</string>
 </resources>

@@ -16,12 +16,31 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <TextView
+            android:id="@+id/secondPlayer"
+            android:layout_width="129dp"
+            android:layout_height="49dp"
+            android:layout_alignEnd="@+id/topPanel"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="490dp"
+            android:layout_marginEnd="1dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/firstPlayer"
+            android:layout_width="131dp"
+            android:layout_height="52dp"
+            android:layout_alignStart="@+id/topPanel"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="83dp"
+            android:textSize="20sp" />
+
         <RelativeLayout
             android:id="@+id/topPanel"
             android:layout_width="391dp"
             android:layout_height="67dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp">
 
@@ -42,14 +61,15 @@
 
             <ImageView
                 android:id="@+id/alarmClockForTimeElapsed"
-                android:contentDescription="@string/count_up_timer_clock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="26dp"
                 android:layout_toStartOf="@+id/timeElapsed"
+                android:contentDescription="@string/count_up_timer_clock"
                 app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
         </RelativeLayout>
 
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

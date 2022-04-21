@@ -6,4 +6,116 @@
     android:layout_height="match_parent"
     tools:context=".PlayerSelectActivity">
 
+    <TextView
+        android:id="@+id/player1Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="304dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/player_1_txt"
+        app:layout_constraintBottom_toTopOf="@+id/player1InputPlainText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/player1InputPlainText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/player1InputPlainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:hint="@string/name_player1_hint"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/versusImage"
+        app:layout_constraintEnd_toStartOf="@+id/x_imgView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1Txt" />
+
+    <EditText
+        android:id="@+id/player2InputPlainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="126dp"
+        android:ems="10"
+        android:hint="@string/name_player2_hint"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/y_imgView"
+        app:layout_constraintTop_toBottomOf="@+id/player2Txt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/y_imgView"
+        android:layout_width="82dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/y_image_str_resource"
+        app:layout_constraintEnd_toStartOf="@+id/player2InputPlainText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/versusImage"
+        app:srcCompat="@drawable/ic_android_black_24dp" />
+
+    <TextView
+        android:id="@+id/player2Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/player_2_txt"
+        app:layout_constraintEnd_toEndOf="@+id/player2InputPlainText"
+        app:layout_constraintTop_toBottomOf="@+id/versusImage" />
+
+    <Button
+        android:id="@+id/playBtn_playerSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:backgroundTint="@color/green_button_color"
+        android:onClick="onClickPlayBtn_playerSelect"
+        android:text="@string/play"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2InputPlainText" />
+
+    <ImageView
+        android:id="@+id/versusImage"
+        android:contentDescription="@string/versusimage"
+        android:layout_width="145dp"
+        android:layout_height="132dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407"
+        app:srcCompat="@drawable/tictactoe_icon" />
+
+    <ImageView
+        android:id="@+id/x_imgView"
+        android:layout_width="81dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="@string/x_image_str_resource"
+        app:layout_constraintBottom_toTopOf="@+id/versusImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/player1InputPlainText"
+        app:srcCompat="@drawable/ic_android_black_24dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

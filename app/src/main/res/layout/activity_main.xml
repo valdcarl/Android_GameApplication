@@ -12,48 +12,64 @@
 
     <ImageView
         android:id="@+id/gameLogoImg"
-        android:contentDescription="@string/logo"
         android:layout_width="202dp"
         android:layout_height="173dp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="110dp"
         android:layout_marginEnd="120dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintBottom_toTopOf="@+id/playBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sudoku_icon" />
+        app:srcCompat="@drawable/tictactoe_icon" />
 
     <Button
         android:id="@+id/playBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="120dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="@color/green_button_color"
         android:text="@string/play"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/exitBtn"
+        app:layout_constraintBottom_toTopOf="@+id/aboutBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gameLogoImg" />
+
+    <Button
+        android:id="@+id/aboutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/green_button_color"
+        android:text="@string/rules"
+        app:layout_constraintBottom_toTopOf="@+id/exitBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playBtn" />
 
     <Button
         android:id="@+id/exitBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="120dp"
+        android:layout_marginBottom="203dp"
         android:backgroundTint="@color/green_button_color"
         android:text="@string/exit"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/aboutBtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

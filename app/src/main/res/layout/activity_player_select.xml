@@ -95,15 +95,15 @@
 
     <ImageView
         android:id="@+id/versusImage"
+        android:layout_width="140dp"
+        android:layout_height="129dp"
         android:contentDescription="@string/versusimage"
-        android:layout_width="145dp"
-        android:layout_height="132dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.407"
-        app:srcCompat="@drawable/tictactoe_icon" />
+        app:srcCompat="@drawable/versus" />
 
     <ImageView
         android:id="@+id/x_imgView"

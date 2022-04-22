@@ -41,4 +41,7 @@
     <string name="x_image_str_resource">X image</string>
     <string name="y_image_str_resource">Y image</string>
     <string name="versusimage">versusImage</string>
+    <string name="_0_for_p1">0</string>
+    <string name="_0_for_p2">0</string>
+    <string name="restart">RESTART</string>
 </resources>

@@ -1,6 +1,8 @@
 package edu.cudenver.android_gameapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
@@ -14,8 +16,8 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
     private boolean playerActiveTurn;           // switch between player turns
     private TextView firstPlayer;               // first player
     private TextView secondPlayer;              // second player
-    private TextView player1TxtViewScore;            // first player score counter
-    private TextView player2TxtViewScore;            // second player score counter
+    private TextView player1TxtViewScore;       // first player score counter
+    private TextView player2TxtViewScore;       // second player score counter
     private int untilEndGameCounter;            // 9 total moves allowed
     private Button restartTheGame;              // button to restart the game
     private Button [] buttons = new Button[9];  // array of buttons (GameBoard)
@@ -26,7 +28,7 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
     // initially a game is in a state of all-empty tiles
     // gameState will be updated as players progress their progress
     /*
-        Game States to keep track of what buttons pertain to which players
+        Game States to keep track of what buttons pertain to which players, and no players
         player 1 tile => 0
         player 2 tile => 1
         empty tile    => 2
@@ -67,11 +69,15 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
         // for the score counters (TextViews)
         player1TxtViewScore = findViewById(R.id.player1TxtViewScore);
         player2TxtViewScore = findViewById(R.id.player2TxtViewScore);
+        untilEndGameCounter = 0;    // no moves are made when games starts so game counter = 0
+        playerActiveTurn = true;    // toggle turn true = player1, false = player2
+
         // for restarting the game for a clean-state (Button)
         restartTheGame = findViewById(R.id.restartBtn);
+
         // to initialize all of our buttons
-        for (int i = 0; i < buttons.length; i++) {
-            // all buttons are +@+id/btni , where we can iterate through each button easier
+        for(int i = 0; i < buttons.length; i++) {
+            // all buttons are +@+id/btn[i] , where we can iterate through each button easier
             String id = "btn" + i;
             // need too convert to R.id.theResourceName format
             int rId = getResources().getIdentifier(id, "id", getPackageName());
@@ -81,11 +87,110 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
         }
 
 
+
     } // end of onCreate PlayGameActivity
 
     // on click for each button
     @Override
     public void onClick(View view) {
-        Toast.makeText(this, "Test Button", Toast.LENGTH_SHORT).show();
-    }
-}
+        /*
+            An action is to occur per button clicked throughout the duration of the game
+            The actions include an onClick event to make a button an X, O, not allow movement,
+            switch between player turns, etc.
+         */
+
+        // every button is it's own view
+        // Toast.makeText(this, "Test Button", Toast.LENGTH_SHORT).show();
+        // must constantly check availability of the button
+        if(!((Button)view).getText().toString().equals("")) {
+            return;
+            // it's an empty button, so a player is allowed to play here
+        } // otherwise
+        // retrieve a button's id
+        String buttonID = view.getResources().getResourceEntryName(view.getId());
+        // need to trim the id string though so that we only retrieve the specific value
+        // this allows us to get the index for our game state, -1 allows us to get that last value
+        int gameStatePointer = Integer.parseInt(
+                buttonID.substring(buttonID.length()-1, buttonID.length()));
+
+        if(playerActiveTurn) {
+            // if it's player 1, change the text to an 'X' and set color of X
+            ((Button)view).setText("X");
+            ((Button)view).setTextColor(Color.parseColor("#95120A"));
+            // update game state as well
+            gameState[gameStatePointer] = 0;
+        } else {
+            // otherwise, it's player2, change the text to an 'O' and set color of O
+            ((Button)view).setText("O");
+            ((Button)view).setTextColor(Color.parseColor("#45E9F3"));
+            // update game state as well
+            gameState[gameStatePointer] = 1;
+        }
+        untilEndGameCounter = untilEndGameCounter + 1;
+        if(checkWinnerOfGame()) {
+            if(playerActiveTurn) {
+                // need to get the score for player1, then update that score +1
+                 String player1StringScore = player1TxtViewScore.getText().toString();
+                 int player1Score = Integer.parseInt(player1StringScore);
+                 // increment p1's previous score by +1
+                 player1Score++;
+                 // set player1's score TextView to the updated score
+                 player1TxtViewScore.setText(player1Score);
+                 // announce winner using a toast, CAN ALSO CALL ANOTHER ACTIVITY HERE OR A FRAGMENT
+                 Toast.makeText(this, firstPlayer + " WINS!", Toast.LENGTH_LONG). show();
+                 rematch();
+            } else {
+                String player2StringScore = player2TxtViewScore.getText().toString();
+                int player2Score = Integer.parseInt(player2StringScore);
+                // increment p1's previous score by +1
+                player2Score++;
+                // set player1's score TextView to the updated score
+                player1TxtViewScore.setText(player2Score);
+                // announce winner using a toast, CAN ALSO CALL ANOTHER ACTIVITY HERE OR A FRAGMENT
+                Toast.makeText(this, secondPlayer + " WINS!", Toast.LENGTH_LONG). show();
+                rematch();
+            }
+        } else if(untilEndGameCounter == 9){
+            // no one won the game, simply rematch!
+            Toast.makeText(this, "TIE GAME! GO AGAIN!", Toast.LENGTH_LONG). show();
+            rematch();
+        } else {
+            // toggle turns
+            playerActiveTurn = !playerActiveTurn;
+        }
+    } // onClick for buttons
+    public boolean checkWinnerOfGame() {
+        /*
+            Check against all the possibleWinningCombinations to determine if a player has won
+            the game or not.
+         */
+        boolean winner = false;
+        // iterate through all winning positions and their indices
+        for(int [] winningCombo : possibleWinningCombinations) {
+            // checking each index of each position matching a certain players gameState assigned
+            // value, if that value is 2 however, we know that they are empty tiles
+            // empty tiles are un-played tiles meaning should not win on this condition, (!= 2)
+            if (gameState[winningCombo[0]] == gameState[winningCombo[1]] &&
+                    gameState[winningCombo[1]] == gameState[winningCombo[2]] &&
+                    gameState[winningCombo[0]] != 2) {
+                winner = true;
+            }
+        }
+        return winner;
+    } // end checkWinnerOfGame function
+
+    public void rematch() {
+        /*
+            After a match is completed, the game should repeat with a clean gameState, updated
+            counters with a clean board of no X's or O's
+            Every game is player1's turn first
+         */
+        untilEndGameCounter = 0;
+        playerActiveTurn = true;
+        for (int i = 0; i < buttons.length; i++) {
+            gameState[i] = 2;
+            buttons[i].setText("");
+        }
+    } // end rematch function
+
+} // end PlayGameActivity

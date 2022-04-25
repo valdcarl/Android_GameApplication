@@ -16,10 +16,13 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
     private boolean playerActiveTurn;           // switch between player turns
     private TextView firstPlayer;               // first player
     private TextView secondPlayer;              // second player
-    private TextView player1TxtViewScore;       // first player score counter
-    private TextView player2TxtViewScore;       // second player score counter
+    private TextView player1TxtViewScore;       // first player score Textview
+    private TextView player2TxtViewScore;       // second player score Textview
+    private int player1Counter;                 // first player score counter
+    private int player2Counter;                 // second player score counter
     private int untilEndGameCounter;            // 9 total moves allowed
-    private Button restartTheGame;              // button to restart the game
+    private Button restartBtn;                  // button to restart the game
+    private Button goHomeFromGameBtn;           // button to completely exit the game
     private Button [] buttons = new Button[9];  // array of buttons (GameBoard)
 
     int [] gameState = {2, 2, 2,
@@ -69,11 +72,13 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
         // for the score counters (TextViews)
         player1TxtViewScore = findViewById(R.id.player1TxtViewScore);
         player2TxtViewScore = findViewById(R.id.player2TxtViewScore);
+        player1Counter = 0;
+        player2Counter = 0;
         untilEndGameCounter = 0;    // no moves are made when games starts so game counter = 0
         playerActiveTurn = true;    // toggle turn true = player1, false = player2
 
         // for restarting the game for a clean-state (Button)
-        restartTheGame = findViewById(R.id.restartBtn);
+        restartBtn = findViewById(R.id.restartBtn);
 
         // to initialize all of our buttons
         for(int i = 0; i < buttons.length; i++) {
@@ -86,7 +91,7 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
             buttons[i].setOnClickListener(this);
         }
 
-
+        Button restartTheGame = findViewById(R.id.restartBtn);
 
     } // end of onCreate PlayGameActivity
 
@@ -126,38 +131,62 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
             // update game state as well
             gameState[gameStatePointer] = 1;
         }
-        untilEndGameCounter = untilEndGameCounter + 1;
+        untilEndGameCounter++;
+
         if(checkWinnerOfGame()) {
             if(playerActiveTurn) {
                 // need to get the score for player1, then update that score +1
-                 String player1StringScore = player1TxtViewScore.getText().toString();
-                 int player1Score = Integer.parseInt(player1StringScore);
-                 // increment p1's previous score by +1
-                 player1Score++;
-                 // set player1's score TextView to the updated score
-                 player1TxtViewScore.setText(player1Score);
+//                 String player1StringScore = player1TxtViewScore.getText().toString();
+//                 int player1Score = Integer.parseInt(player1StringScore);
+//                 // increment p1's previous score by +1
+//                 player1Score++;
+//                 // set player1's score TextView to the updated score
+//                 player1TxtViewScore.setText(player1Score);
                  // announce winner using a toast, CAN ALSO CALL ANOTHER ACTIVITY HERE OR A FRAGMENT
-                 Toast.makeText(this, firstPlayer + " WINS!", Toast.LENGTH_LONG). show();
+                player1Counter++;
+                updateScores();
+                // need to getText from the textView and convert it to String for the toast to work
+                // properly, otherwise it returns a toast with the object textview
+                String firstPlayerName = firstPlayer.getText().toString();
+                Toast.makeText(this, firstPlayerName + " WINS!", Toast.LENGTH_SHORT). show();
                  rematch();
             } else {
-                String player2StringScore = player2TxtViewScore.getText().toString();
-                int player2Score = Integer.parseInt(player2StringScore);
-                // increment p1's previous score by +1
-                player2Score++;
-                // set player1's score TextView to the updated score
-                player1TxtViewScore.setText(player2Score);
+//                String player2StringScore = player2TxtViewScore.getText().toString();
+//                int player2Score = Integer.parseInt(player2StringScore);
+//                // increment p1's previous score by +1
+//                player2Score++;
+//                // set player1's score TextView to the updated score
+//                player1TxtViewScore.setText(player2Score);
                 // announce winner using a toast, CAN ALSO CALL ANOTHER ACTIVITY HERE OR A FRAGMENT
-                Toast.makeText(this, secondPlayer + " WINS!", Toast.LENGTH_LONG). show();
+                player2Counter++;
+                updateScores();
+                // need to getText from the textView and convert it to String for the toast to work
+                // properly, otherwise it returns a toast with the object textview
+                String secondPlayerName = secondPlayer.getText().toString();
+                Toast.makeText(this, secondPlayerName + " WINS!", Toast.LENGTH_SHORT). show();
                 rematch();
             }
         } else if(untilEndGameCounter == 9){
             // no one won the game, simply rematch!
-            Toast.makeText(this, "TIE GAME! GO AGAIN!", Toast.LENGTH_LONG). show();
+            Toast.makeText(this, "TIE GAME! GO AGAIN!", Toast.LENGTH_SHORT). show();
             rematch();
         } else {
-            // toggle turns
+            // toggle turns between the players
             playerActiveTurn = !playerActiveTurn;
         }
+
+        // restart Button
+        restartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                player1Counter=0;
+                player2Counter=0;
+                updateScores();
+                rematch();
+                Toast.makeText(PlayGameActivity.this, "GAME RESTARTED", Toast.LENGTH_SHORT). show();
+            }
+        });
+
     } // onClick for buttons
     public boolean checkWinnerOfGame() {
         /*
@@ -179,11 +208,18 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
         return winner;
     } // end checkWinnerOfGame function
 
+    public void updateScores() {
+        player1TxtViewScore.setText(Integer.toString(player1Counter));
+        player2TxtViewScore.setText(Integer.toString(player2Counter));
+    }
+
     public void rematch() {
         /*
             After a match is completed, the game should repeat with a clean gameState, updated
             counters with a clean board of no X's or O's
             Every game is player1's turn first
+
+            Can also be-used for the restart Button to wipe board clean from all scores as well
          */
         untilEndGameCounter = 0;
         playerActiveTurn = true;
@@ -192,5 +228,4 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
             buttons[i].setText("");
         }
     } // end rematch function
-
 } // end PlayGameActivity

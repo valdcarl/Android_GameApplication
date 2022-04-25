@@ -106,7 +106,8 @@
             android:layout_marginTop="130dp"
             android:backgroundTint="@color/green_button_color"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/btn1"
@@ -118,7 +119,8 @@
             android:layout_toEndOf="@+id/btn0"
             android:backgroundTint="@color/green_button_color"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/btn2"
@@ -132,7 +134,8 @@
             android:layout_toEndOf="@+id/btn1"
             android:backgroundTint="@color/green_button_color"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/btn3"
@@ -144,7 +147,8 @@
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/green_button_color"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/btn4"
@@ -156,7 +160,8 @@
             android:layout_toEndOf="@+id/btn3"
             android:backgroundTint="@color/green_button_color"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/btn5"
@@ -170,7 +175,8 @@
             android:layout_toEndOf="@+id/btn4"
             android:backgroundTint="@color/green_button_color"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/btn6"
@@ -182,7 +188,8 @@
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/green_button_color"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/btn7"
@@ -194,7 +201,8 @@
             android:layout_toEndOf="@+id/btn6"
             android:backgroundTint="@color/green_button_color"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/btn8"
@@ -208,7 +216,8 @@
             android:layout_toEndOf="@+id/btn7"
             android:backgroundTint="@color/green_button_color"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/restartBtn"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Game_Application(CHANGE ME)</string>
+    <string name="app_name">TIC-TAC-TOE</string>
     <string name="play">PLAY</string>
     <string name="exit">EXIT</string>
     <string name="easy">EASY</string>

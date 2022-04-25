@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
     tools:context=".AboutActivity">
 
     <TextView
@@ -15,6 +16,7 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="120dp"
+        android:textColor="#778899"
         android:text="@string/rules"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -28,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:layout_marginEnd="120dp"
+        android:textColor="#778899"
         android:text="@string/tic_tac_toe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +43,7 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="120dp"
+        android:textColor="#778899"
         android:text="@string/rulesexplained"
         android:textSize="12sp"
         android:textStyle="bold"

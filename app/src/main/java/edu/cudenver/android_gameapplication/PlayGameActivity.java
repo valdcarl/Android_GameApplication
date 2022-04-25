@@ -2,6 +2,7 @@ package edu.cudenver.android_gameapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -79,6 +80,8 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
 
         // for restarting the game for a clean-state (Button)
         restartBtn = findViewById(R.id.restartBtn);
+        // to go to the home screen from the game (Button)
+        goHomeFromGameBtn = findViewById(R.id.goHomeFromGameBtn);
 
         // to initialize all of our buttons
         for(int i = 0; i < buttons.length; i++) {
@@ -90,8 +93,6 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
             buttons[i] = findViewById(rId);
             buttons[i].setOnClickListener(this);
         }
-
-        Button restartTheGame = findViewById(R.id.restartBtn);
 
     } // end of onCreate PlayGameActivity
 
@@ -127,7 +128,7 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
         } else {
             // otherwise, it's player2, change the text to an 'O' and set color of O
             ((Button)view).setText("O");
-            ((Button)view).setTextColor(Color.parseColor("#45E9F3"));
+            ((Button)view).setTextColor(Color.parseColor("#0047AB"));
             // update game state as well
             gameState[gameStatePointer] = 1;
         }
@@ -186,6 +187,14 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
                 Toast.makeText(PlayGameActivity.this, "GAME RESTARTED", Toast.LENGTH_SHORT). show();
             }
         });
+        // go home Button (from game)
+        goHomeFromGameBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // head to main activity, resets everything also, since no saving state
+                goHomeFromGameBtnFunction();
+            }
+        });
 
     } // onClick for buttons
     public boolean checkWinnerOfGame() {
@@ -228,4 +237,9 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
             buttons[i].setText("");
         }
     } // end rematch function
+
+    public void goHomeFromGameBtnFunction() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 } // end PlayGameActivity

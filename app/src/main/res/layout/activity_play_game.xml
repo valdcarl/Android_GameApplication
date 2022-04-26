@@ -26,6 +26,7 @@
             android:layout_marginTop="505dp"
             android:layout_marginEnd="1dp"
             android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -37,6 +38,7 @@
             android:layout_marginStart="0dp"
             android:layout_marginTop="83dp"
             android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <RelativeLayout

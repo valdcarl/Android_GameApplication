@@ -15,6 +15,7 @@
         android:layout_marginEnd="304dp"
         android:layout_marginBottom="5dp"
         android:text="@string/player_1_txt"
+        android:textStyle="bold"
         android:textColor="#778899"
         app:layout_constraintBottom_toTopOf="@+id/player1InputPlainText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,6 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/player_2_txt"
+        android:textStyle="bold"
         android:textColor="#778899"
         app:layout_constraintEnd_toEndOf="@+id/player2InputPlainText"
         app:layout_constraintTop_toBottomOf="@+id/versusImage" />

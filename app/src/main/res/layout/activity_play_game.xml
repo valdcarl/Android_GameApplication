@@ -25,9 +25,10 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="505dp"
             android:layout_marginEnd="1dp"
+            android:fontFamily="@font/vaporb"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/firstPlayer"
@@ -37,6 +38,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="83dp"
+            android:fontFamily="@font/vaporb"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:textSize="20sp" />
@@ -58,6 +60,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
+                android:fontFamily="@font/vaporb"
                 android:gravity="center"
                 android:text="@string/_00_00"
                 android:textColor="#FFFFFF"
@@ -86,8 +89,9 @@
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:layout_toEndOf="@+id/firstPlayer"
-            android:textColor="#FFFFFF"
+            android:fontFamily="@font/vaporbi"
             android:text="@string/_0_for_p1"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <TextView
@@ -100,8 +104,9 @@
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="0dp"
             android:layout_toStartOf="@+id/secondPlayer"
-            android:textColor="#FFFFFF"
+            android:fontFamily="@font/vaporbi"
             android:text="@string/_0_for_p2"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -113,6 +118,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="130dp"
             android:background="@drawable/custom_buttons"
+            android:fontFamily="@font/val"
             android:textSize="50sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -126,6 +132,7 @@
             android:layout_marginTop="0dp"
             android:layout_toEndOf="@+id/btn0"
             android:background="@drawable/custom_buttons"
+            android:fontFamily="@font/val"
             android:textSize="50sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -141,6 +148,7 @@
             android:layout_marginEnd="30dp"
             android:layout_toEndOf="@+id/btn1"
             android:background="@drawable/custom_buttons"
+            android:fontFamily="@font/val"
             android:textSize="50sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -154,6 +162,7 @@
             android:layout_marginStart="0dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/custom_buttons"
+            android:fontFamily="@font/val"
             android:textSize="50sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -167,6 +176,7 @@
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/btn3"
             android:background="@drawable/custom_buttons"
+            android:fontFamily="@font/val"
             android:textSize="50sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -182,6 +192,7 @@
             android:layout_marginEnd="0dp"
             android:layout_toEndOf="@+id/btn4"
             android:background="@drawable/custom_buttons"
+            android:fontFamily="@font/val"
             android:textSize="50sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -195,6 +206,7 @@
             android:layout_marginStart="0dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/custom_buttons"
+            android:fontFamily="@font/val"
             android:textSize="50sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -208,6 +220,7 @@
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/btn6"
             android:background="@drawable/custom_buttons"
+            android:fontFamily="@font/val"
             android:textSize="50sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -223,6 +236,7 @@
             android:layout_marginEnd="0dp"
             android:layout_toEndOf="@+id/btn7"
             android:background="@drawable/custom_buttons"
+            android:fontFamily="@font/val"
             android:textSize="50sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -237,8 +251,9 @@
             android:layout_marginStart="2dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/black"
+            android:fontFamily="@font/vaporbs"
             android:text="@string/restart"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/goHomeFromGameBtn"
@@ -250,8 +265,9 @@
             android:layout_marginStart="2dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/black"
+            android:fontFamily="@font/vaporbs"
             android:text="@string/home"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
 
     </RelativeLayout>

@@ -5,5 +5,3 @@
 * Justing Luong
 * James Nguyen
 * Carlos Valdez
-
- 

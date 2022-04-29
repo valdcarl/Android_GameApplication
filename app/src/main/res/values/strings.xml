@@ -45,4 +45,6 @@
     <string name="_0_for_p2">0</string>
     <string name="restart">RESTART</string>
     <string name="home">HOME</string>
+    <string name="x">X</string>
+    <string name="o">o</string>
 </resources>

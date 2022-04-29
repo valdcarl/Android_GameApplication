@@ -25,7 +25,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="505dp"
             android:layout_marginEnd="1dp"
-            android:fontFamily="@font/vaporb"
+            android:fontFamily="@font/orbitron_black"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -38,10 +38,10 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="83dp"
-            android:fontFamily="@font/vaporb"
+            android:fontFamily="@font/orbitron_black"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <RelativeLayout
             android:id="@+id/topPanel"
@@ -60,7 +60,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:fontFamily="@font/vaporb"
+                android:fontFamily="@font/orbitron_black"
                 android:gravity="center"
                 android:text="@string/_00_00"
                 android:textColor="#FFFFFF"
@@ -89,7 +89,7 @@
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:layout_toEndOf="@+id/firstPlayer"
-            android:fontFamily="@font/vaporbi"
+            android:fontFamily="@font/orbitron_black"
             android:text="@string/_0_for_p1"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
@@ -104,7 +104,7 @@
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="0dp"
             android:layout_toStartOf="@+id/secondPlayer"
-            android:fontFamily="@font/vaporbi"
+            android:fontFamily="@font/orbitron_black"
             android:text="@string/_0_for_p2"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
@@ -251,7 +251,7 @@
             android:layout_marginStart="2dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/black"
-            android:fontFamily="@font/vaporbs"
+            android:fontFamily="@font/orbitron_black"
             android:text="@string/restart"
             android:textSize="12sp" />
 
@@ -265,7 +265,7 @@
             android:layout_marginStart="2dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/black"
-            android:fontFamily="@font/vaporbs"
+            android:fontFamily="@font/orbitron_black"
             android:text="@string/home"
             android:textSize="12sp" />
 

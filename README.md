@@ -1,4 +1,4 @@
-# Android Game Application  (CHANGE ME)
+# Android Tic-Tac-Toe Game (Android Application)
 ## CSCI 4211 : Mobile Computing and Programming Project
 ### Team: Debussy Devs
 ### Members:

@@ -5,3 +5,8 @@
 * Justing Luong
 * James Nguyen
 * Carlos Valdez
+
+### #
+* Android Studio    ---> IDE for Android application development
+* Java              ---> Programming language chosen as opposed to Kotlin due to class structure/exposure
+* XML               ---> User Interface 

@@ -1,7 +1,7 @@
 # Android Tic-Tac-Toe Game (Android Application)
 ## CSCI 4211 : Mobile Computing and Programming Project
 ### Team: Debussy Devs
-### Members:
+### Members
 * Justing Luong
 * James Nguyen
 * Carlos Valdez
